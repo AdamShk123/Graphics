@@ -1,8 +1,8 @@
 all: clean compile link
 
-FILES := src/main.cpp
+FILES := src/main.cpp src/glad.c
 
-LIBS := -l SDL2main -l SDL2 -l SDL2_image -l SDL2_mixer -l SDL2_ttf
+LIBS := -l SDL2main -l SDL2 -l SDL2_image -l SDL2_mixer -l SDL2_ttf -lGL -l SDL2_gpu
 
 compile:
 	g++ -g ${FILES} -c
