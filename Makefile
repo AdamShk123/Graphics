@@ -1,8 +1,8 @@
 all: clean compile link
 
-FILES := src/main.cpp src/glad.c src/batch_renderer.cpp
+FILES := src/main.cpp
 
-LIBS := -l SDL2main -l SDL2 -l SDL2_image -l SDL2_mixer -l SDL2_ttf -lGL
+LIBS := -l SDL2main -l SDL2 -l SDL2_mixer -l SDL2_ttf -l SDL2_image
 
 compile:
 	g++ -g ${FILES} -c
