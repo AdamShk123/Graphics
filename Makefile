@@ -1,11 +1,12 @@
 all: clean compile link
 
-FILES := src/main.cpp
+FILES := src/main.cpp src/glad.c
 
-LIBS := -l SDL2main -l SDL2 -l SDL2_mixer -l SDL2_ttf -l SDL2_image
+
+LIBS := -l SDL2main -l SDL2 -l SDL2_mixer -l GL
 
 compile:
-	g++ -g ${FILES} -c
+	g++ --std=c++17 -g ${FILES} -c
 	mv *.o obj/
 
 link:
